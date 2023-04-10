@@ -53,7 +53,7 @@ async function main() {
         console.log(e);
     }finally{
         await client.close();
-    }
+    }  
 }
 
 async function listDatabases(client){
@@ -116,7 +116,7 @@ async function findListingsWithTheBoardingTimeAfter(client, {
             console.log(`   _id: ${result._id}`);
             console.log(`   boarding Time: ${result.BoardingTime}`);
             console.log(`   Airline: ${result.Airline}`);
-            console.log(`   most recent review date: ${date}`);
+            //console.log(`   most recent review date: ${date}`);
         });
     } else {
         console.log(`No listings found with the boarding time from ${boardingTimeFrom}`);
